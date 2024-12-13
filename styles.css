@@ -1,0 +1,605 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  main{
+    background-color: black;
+    color: white;
+    width: auto;
+  }
+  .navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    height: 150px;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background-color: #000;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+  .euphoria-title {
+    line-height: 80px;
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: left;
+    color: transparent;
+    -webkit-text-stroke: 1px white; 
+    letter-spacing: 5px;
+    margin-top:8rem;
+    margin-left: 15rem;
+    margin-bottom: 20px;
+  }
+  
+  .euphoria-title span {
+    display: block;
+  }
+  
+  .nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .product-section {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+  }
+  
+  .product-image {
+    width: 300px;
+    margin: 20px 0;
+  }
+  .product-info{
+    line-height: 1rem;
+  }
+  .product-info p {
+    font-size: 1.2rem;
+  }
+  /* Sizes Section Styling */
+.size-options {
+    display: flex;
+    gap: 10px;
+}
+
+.size-btn {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 7rem;
+}
+
+.size-btn:hover {
+    transform: scale(1.05);
+}
+
+.size-btn:focus {
+    outline: none;
+    border-color: crimson;
+}
+  .add-to-cart-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  #cycleimg{
+    height: 20rem;
+    width: auto;
+    position: relative;
+    bottom: 5rem;
+    left: 25rem;
+  }
+  /* Colors Section Styling */
+.colors-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .colors-section p {
+    margin-right: 10px;
+    font-size: 1em;
+    color: #e0e0e0;
+  }
+  
+  .color-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .color-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .color-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  .details{
+      margin-right: 10rem; 
+      padding: 10rem;
+      line-height: 5rem;
+  }
+  .image-boxes-section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: 20px;
+    max-width: 700px;
+    max-height: 300px;
+}
+.image-box {
+  border: 2px solid #ccc; 
+  background-color: #fff;
+  border-radius: 8px; 
+  overflow: hidden; 
+  width: 10rem; /* Fixed width */
+  height: 10rem; /* Fixed height to match */
+  display: flex;
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+  position: relative;
+  top: 5rem;
+}
+
+.box-image {
+  width: 100%; 
+  height: 100%; 
+  display: block;
+  object-fit: cover; /* Ensures the image fills the box */
+  object-position: right center; /* Show the right side */
+}
+
+.customize-section {
+  padding: 20px;
+  position: relative;
+  top: 5rem;
+}
+
+.customize-options {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide overflow when slides move */
+  margin-left: 5rem;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease;
+  gap: 10rem;
+  padding: 5rem;
+}
+
+.custom-img-cont {
+  height: 200px;
+  width: 250px; /* Each image takes up 1/3 of the container */
+  background-color: #000000;
+  margin-top: 2rem;
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.customize-img {
+  height: 100%;
+  width: 100%;
+  object-position: center;
+}
+
+#customize-head {
+  font-size: 3rem;
+  text-align: center;
+  border-bottom: 1px solid #746f6f;
+  padding: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.description-section {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 5rem;
+}
+
+.tab-container {
+  display: flex;
+  margin-left: 5rem;
+  gap: 3rem;
+}
+
+.tab {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  width: 250px;
+  font-size: 3rem;
+}
+
+.tab.active {
+  border-bottom: 2px solid crimson;
+  font-weight: bold;
+}
+
+.tab-content {
+  padding: 20px;
+  width: 900px;
+  text-align: left;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  margin-left: 5rem;
+}
+
+.tab-content p {
+  margin-top: 1rem;
+  color: #636161;
+}
+
+.hidden {
+  display: none;
+}
+
+  .red-button{
+    background-color: crimson;
+    color: #fff;
+    padding: 1.5rem;
+    width: 400px;
+    font-size: 1.5rem;
+    border: none;
+    margin-top: 10rem;
+  }
+  #button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inspiration-section {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .inspiration-gallery {
+    display: grid;
+    grid-template-columns: 300px 300px 300px; /* 3 equal columns */
+    grid-template-rows: 300px 300px; /* 2 equal rows */
+    gap: 2rem; /* Optional spacing between items */
+}
+
+.inspiration-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill; /* Ensure images fill their grid area without distortion */
+    object-position: center;
+  }
+
+.inspiration-gallery img:nth-child(2) {
+    grid-row: span 2; /* Make the second image span two rows */
+}
+  
+/* Footer Styling */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 10px;
+  font-family: Arial, sans-serif;
+  height: 400px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Makes it responsive */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 5rem;
+}
+
+.footer-logo {
+  flex: 1;
+}
+
+.footer-logo p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-logo span {
+  color: red;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column p {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive Design */
+
+@media (max-width: 947px){
+  .menu-btn{
+    display: block;
+    z-index: 999;
+}
+.menu-btn i.active:before{
+    content: "\f00d";
+}
+.navbar .menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#logo{
+  width: 150px;
+  height: 100px
+}
+.navbar .menu.active{
+    left: 0;
+}
+.navbar .menu li{
+    display: block;
+}
+.navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+}
+.cart{
+  display: none;
+}
+.euphoria-title {
+  line-height: 40px;
+  font-size: 4rem;
+  margin-left: 2rem;
+}
+
+.product-section {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+.product-image {
+  width: 300px;
+  margin: 0px 0;
+  margin-left: -50rem;
+}
+.details{
+  margin-left: 6rem;
+}
+.customize-section {
+padding: 20px;
+position: relative;
+top: 5rem;
+}
+
+.customize-options {
+margin-left: 0rem;
+}
+
+.slider {
+gap: 5rem;
+padding: 5rem;
+max-width: 300px;
+}
+
+#customize-head {
+font-size: 2rem;
+text-align: center;
+border-bottom: 1px solid #746f6f;
+padding: 1rem;
+margin-left: 3rem;
+margin-right: 6rem;
+}
+
+.description-section {
+text-align: center;
+padding: 20px;
+position: relative;
+top: 5rem;
+}
+
+.tab-container {
+display: flex;
+margin-left: 0rem;
+gap: 1rem;
+}
+
+.tab {
+padding: 10px;
+margin: 5px;
+cursor: pointer;
+width: 250px;
+font-size: 2rem;
+}
+
+.tab.active {
+border-bottom: 2px solid crimson;
+font-weight: bold;
+}
+
+.tab-content {
+padding: 20px;
+width: 350px;
+text-align: left;
+font-size: 1rem;
+line-height: 2.5rem;
+margin-left: 0rem;
+}
+
+.red-button{
+  background-color: crimson;
+  color: #fff;
+  padding: 1.5rem;
+  width: 200px;
+  font-size: 1rem;
+  border: none;
+  margin-top: 10rem;
+}
+.inspiration-section {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+.inspiration-gallery {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 300px 300px 300px 300px 300px 300px;
+  gap: 2rem; /* Optional spacing between items */
+}
+
+.inspiration-gallery img:nth-child(2) {
+  grid-row: span none; /* Make the second image span two rows */
+}
+.footer {
+  height: 700px;
+}
+.footer-container {
+  flex-direction: column; /* Stack columns on smaller screens */
+  text-align: center;
+}
+
+.footer-column {
+  margin-bottom: 20px;
+}
+}

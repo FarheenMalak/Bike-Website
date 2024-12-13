@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Euphoria</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="max-width">
+          <div class="logo"><img id="logo" src="images/logo-removebg-preview.png" alt=""></div>
+          <ul class="menu">
+              <li><a href="#home" class="menu-btn">Home</a></li>
+              <li><a href="#about" class="menu-btn">About</a></li>
+              <li><a href="#services" class="menu-btn">Services</a></li>
+              <li><a href="#contact" class="menu-btn">Contact</a></li>
+          </ul>
+          <div class="cart">🛒</div>
+          <div class="menu-btn">
+              <i class="fas fa-bars"></i>
+          </div>
+      </div>
+  </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <!-- Main Section -->
+    <section class="product-section">
+        <div >
+            <div class="euphoria-title whitebg">
+                <span>THE</span><br>
+                <span>EUPHORIA</span>
+            </div>
+            
+            <img id="cycleimg" src="images/bluecycle.png" alt="Bike" class="product-image">
+        </div>
+        
+        <div class="details">
+            <div class="colors-section">
+                <p>Colors:</p>
+                <div class="color-options">
+                    <span onclick="changeColor()" class="color-circle" data-color="white" style="background-color: #ffffff;"></span>
+                    <span onclick="changeColor()" class="color-circle" data-color="gray" style="background-color: #c4c4c4"></span>
+                    <span onclick="changeColor()" class="color-circle" data-color="black" style="background-color: #030303; border: 1px solid #ccc;"></span>
+                </div>
+            </div>
+        
+            <div class="sizes-section">
+                <p>Sizes:</p>
+                <div class="size-options">
+                    <button class="size-btn" onclick="changeSize()" data-size="small">Small</button>
+                    <button class="size-btn" onclick="changeSize()" data-size="medium">Medium</button>
+                    <button class="size-btn" onclick="changeSize()" data-size="large">Large</button>
+                </div>
+            </div>
+        
+            <div class="product-info">
+                <pre>
+                <p class="whitebg">Price:    $2800</p>
+                <p class="whitebg">Weight:   1.3 kg</p>
+                </pre>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Boxes Section -->
+    <section class="image-boxes-section">
+      <div onclick="changeMainImage(this);" class="image-box" id="redcycle">
+          <img src="images/redcycle.png" alt="Red Cycle" class="box-image" id="red-cycle">
+      </div>
+      <div onclick="changeMainImage(this);" class="image-box">
+          <img src="images/bluecycle.png" alt="Blue Cycle" class="box-image">
+      </div>
+      <div onclick="changeMainImage(this);" class="image-box" id="bluecycle">
+          <img src="images/bluecycle.png" alt="Blue Cycle" class="box-image">
+      </div>
+  </section>
+  </main>
+    <!-- Customize Section -->
+    <section class="customize-section">
+      <p id="customize-head">CUSTOMIZE</p>
+      <div class="customize-options">
+        <div class="slider">
+          <div class="custom-img-cont">
+            <img src="images/slider1.png" alt="Saddle" class="customize-img">
+          </div>
+          <div class="custom-img-cont">
+            <img src="images/slider2.png" alt="Crank Arm" class="customize-img">
+          </div>
+          <div class="custom-img-cont">
+            <img src="images/slider3.jfif" alt="Frame" class="customize-img">
+          </div>
+          <div class="custom-img-cont">
+            <img src="images/slider1.png" alt="Saddle" class="customize-img">
+          </div>
+          <div class="custom-img-cont">
+            <img src="images/slider2.png" alt="Crank Arm" class="customize-img">
+          </div>
+          <div class="custom-img-cont">
+            <img src="images/slider3.jfif" alt="Frame" class="customize-img">
+          </div>
+          <div class="custom-img-cont">
+            <img src="images/slider1.png" alt="Saddle" class="customize-img">
+          </div>
+        </div>
+        <!-- Navigation Arrows -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </section>
+    
+    
+
+    <!-- Description Section -->
+    <section class="description-section">
+      <div class="tab-container">
+        <p class="tab active" onclick="showTab('description')">Description</p>
+        <p class="tab" onclick="showTab('specs')">Specs</p>
+      </div>
+      <div id="description" class="tab-content">
+        <h3>Be unique with your choice of ride.</h3>
+        <p>The EUPHORIA turns obstacles into features. Its nimble, poppy feel makes even the most mundane rides feel like they're loaded with features to hop, skip and jump over. It's the kind of bike that makes new trails feel as familiar as the back of your hand.
+          27.5 is the fun-sized wheel size. Smaller wheels provide an ideal balance between toughness and weight saving making them the most fleet-footed (or quick fingered) whether launching logs or weaving through stumps. With its quick and agile character, the 5010 has become a go-to plaything for progressive riders the world over and the only contender on any backyard trails.
+        </p>
+      </div>
+      <div id="specs" class="tab-content hidden">
+        <h3>Product Specifications</h3>
+        <p>Specs will go here...
+          fun-sized wheel size. Smaller wheels provide an ideal balance between toughness and weight saving making them the most fleet-footed (or quick fingered) whether launching logs or weaving through stumps. With its quick and agile character, the 5010 has become a go-to plaything for progressive riders the world
+        </p>
+      </div>
+    </section>
+    
+     <div id="button-container">
+      <button class="red-button">FOLLOW US @UNIQUE BIKES</button>
+     </div>
+    <!-- Inspiration Section -->
+    <section class="inspiration-section">
+      <div class="inspiration-gallery">
+        <img src="images/grid1.jfif" alt="Inspiration Image 1">
+        <img src="images/grid2.jfif" alt="Inspiration Image 2">
+        <img src="images/grid3.jfif" alt="Inspiration Image 3">
+        <img src="images/grid4.jfif" alt="Inspiration Image 4">
+        <img src="images/grid5.jfif" alt="Inspiration Image 5">
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <p>unique <span>style</span></p>
+      </div>
+      <div class="footer-column">
+        <h4>FAQs</h4>
+        <ul>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Account Issues</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>service@uniquestyles.com</p>
+        <p>123 Main St, New York, United States</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; Copyright UniqueStyles</p>
+    </div>
+  </footer>
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
